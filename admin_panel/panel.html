@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Panneau Admin - TikTok RPG</title>
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Panneau de test TikTok RPG</h1>
+
+  <button onclick="fetch('/boss/damage/100', { method: 'POST' })">💥 Infliger 100 dégâts au boss</button>
+  <button onclick="fetch('/boss/reset', { method: 'POST' })">🔄 Réinitialiser le boss</button>
+  <button onclick="fetch('/loot', { method: 'POST', body: JSON.stringify({ name: 'test', level: 1 }), headers: { 'Content-Type': 'application/json' } })">🎁 Tester un loot</button>
+
+</body>
+</html>
