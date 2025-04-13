@@ -9,14 +9,14 @@ CORS(app)
 def index():
     return "Serveur TikTok RPG en ligne !"
 
-# Route pour l'overlay
+# Route pour l'interface live (frontend)
 @app.route("/frontend/<path:filename>")
 def overlay(filename):
     return send_from_directory("frontend", filename)
 
-# Route pour le panel admin
+# Route pour le panneau admin
 @app.route("/admin_panel/<path:filename>")
-def admin(filename):
+def admin_panel(filename):
     return send_from_directory("admin_panel", filename)
 
 if __name__ == "__main__":
